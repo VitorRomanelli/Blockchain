@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" styleClass="background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.view.HomeController">
+   <children>
+      <SplitPane dividerPositions="0.37285714285714283" layoutX="-14.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background" stylesheets="@style.css">
+               <children>
+                  <TableView fx:id="blockTable" prefHeight="398.0" prefWidth="284.0" styleClass="table-row-cell" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                    <columns>
+                      <TableColumn fx:id="nomeColumn" prefWidth="75.0" text="Bloco" />
+                      <TableColumn fx:id="numeroColumn" prefWidth="75.0" text="Número" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <Label fx:id="validade" layoutX="20.0" layoutY="361.0" styleClass="label-blockhain" text="Label" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="20.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="400.0" styleClass="background" stylesheets="@style.css">
+               <children>
+                  <GridPane hgap="5.0" layoutX="47.0" layoutY="92.0" vgap="5.0" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="70.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="120.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="257.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="41.0" minHeight="0.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="41.0" minHeight="6.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="129.0" minHeight="3.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="34.0" minHeight="0.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="86.0" minHeight="4.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Nome do Bloco:" />
+                        <Label fx:id="nomeLabel" styleClass="label-bright" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" />
+                        <Label text="Número:" GridPane.rowIndex="1" />
+                        <Label fx:id="numLabel" styleClass="label-bright" stylesheets="@style.css" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+                        <Label text="Data:" GridPane.rowIndex="6" />
+                        <Label fx:id="dataLabel" styleClass="label-bright" text="Label" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" />
+                        <Label text="Hash Anterior:" GridPane.rowIndex="7" />
+                        <Label text="Hash:" GridPane.rowIndex="8" />
+                        <Label fx:id="prevHashLabel" styleClass="label-bright" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" />
+                        <Label fx:id="hashLabel" styleClass="label-bright" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin></Label>
+                        <Label text="Conteúdo:" GridPane.rowIndex="3" />
+                        <Label fx:id="conteudoLabel" styleClass="label-bright" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
+                        <Label text="Nonce:" GridPane.rowIndex="2" />
+                        <Label fx:id="nonceLabel" styleClass="label-bright" text="Label" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
+                        <Label text="Remetente:" GridPane.rowIndex="4" />
+                        <Label text="Destinatário:" GridPane.rowIndex="5" />
+                        <Label fx:id="remetLabel" styleClass="label-bright" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" />
+                        <Label fx:id="destLabel" styleClass="label-bright" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <HBox layoutX="183.0" layoutY="345.0" spacing="5.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleNovo" text="Novo Bloco" />
+                     </children>
+                  </HBox>
+                  <Label layoutX="10.0" layoutY="6.0" styleClass="label-header" stylesheets="@style.css" text="Detalhes do Bloco:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="15.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="350.0" prefWidth="500.0" styleClass="background-opc2" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.view.newBlockDialogController">
+   <children>
+      <GridPane layoutX="51.0" layoutY="69.0" prefHeight="200.0" prefWidth="419.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="151.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="337.0" minWidth="10.0" prefWidth="269.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="68.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="67.0" minHeight="0.0" prefHeight="57.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="116.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nome" />
+            <Label text="Conteúdo" GridPane.rowIndex="1" />
+            <TextField fx:id="nomeField" GridPane.columnIndex="1" />
+            <TextArea fx:id="conteudoArea" prefHeight="10.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Remetente" GridPane.rowIndex="2" />
+            <Label text="Destinatário" GridPane.rowIndex="3" />
+            <TextField fx:id="remetField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="destField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <HBox layoutX="336.0" layoutY="297.0" spacing="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleSalvar" prefHeight="30.0" prefWidth="100.0" styleClass="button-default" stylesheets="@style.css" text="Salvar" />
+            <Button mnemonicParsing="false" onAction="#handleCancelar" prefHeight="30.0" prefWidth="100.0" text="Cancelar" />
+         </children>
+      </HBox>
+      <AnchorPane prefHeight="31.0" prefWidth="410.0" styleClass="background-opc" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0">
+         <children>
+            <Label layoutX="24.0" layoutY="14.0" styleClass="label-bright" text="Adicionando Bloco" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="5.0" />
+            <Button mnemonicParsing="false" onAction="#handleExit" styleClass="button-window" text="X" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+            <Button layoutX="401.0" layoutY="3.0" mnemonicParsing="false" onAction="#minimize" prefHeight="28.0" prefWidth="46.0" styleClass="button-min" text="–" AnchorPane.topAnchor="2.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
